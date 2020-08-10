@@ -1,0 +1,36 @@
+<div class="simple-card">
+    <h3>All Jobs</h3>
+  
+  <div class="w-form-field" [ngClass]="{'active':showDropdownList}" (click)="showDropdownList=!showDropdownList">
+    <div type="text"  class="c-search-field">{{filterCompanyStr}}
+           <div class="expand-more"></div>
+    </div>
+   </div>
+<div class="company-list" *ngIf="showDropdownList"  >
+    <div *ngFor="let company of company$|async" class="dropdown-item" (click)="filterCompanyStr = company;showDropdownList=!showDropdownList;addSearchCriteria('company',company)">{{company}}</div>
+</div>
+
+<div class="w-form-field" [ngClass]="{'active':showCityDropdown}"
+ (click)="showCityDropdown =!showCityDropdown">
+    <div type="text"  class="c-search-field">{{filterCityStr}}
+        <div class="expand-more"></div>
+    </div>
+</div>
+<div class="company-list" *ngIf="showCityDropdown"  >
+        <div *ngFor="let city of city$|async" class="dropdown-item" (click)="filterCityStr = city;showCityDropdown=!showCityDropdown; addSearchCriteria('city',city)">{{city}}</div>
+    </div>
+<div class="w-form-field" [ngClass]="{'active':showIndustryDropdown}" 
+(click)="showIndustryDropdown =!showIndustryDropdown">
+    <div type="text" placeholder="Filter by Industry" class="c-search-field">{{filterIndustryStr}}
+        <div class="expand-more"></div>
+    </div>
+</div>
+<div class="company-list" *ngIf="showIndustryDropdown"  >
+        <div *ngFor="let industry of industry$|async" class="dropdown-item" (click)="filterIndustryStr = industry;showIndustryDropdown=!showIndustryDropdown;addSearchCriteria('lndustry',industry)">{{industry}}</div>
+    </div>
+    <div class="w-form-field-1" (click)="onSearchClick()">
+            <button type="text"   class="border-right-radius-none primary-button">Search for jobs</button>
+            <button type="search"  class="search-button "></button>
+        </div>
+
+</div>

@@ -1,0 +1,42 @@
+<div class="container">
+<div class="hero-image-container">
+    <div class="hero-content">
+        <h1>Get Matched</h1>
+        <h4>with jobs best suited your skills</h4>
+        <div class="hero-search-form">
+            <input class="hero-input" type="search" maxlength="256" placeholder="Job Title">
+            <input type="submit" value="Search" class="hero-button" (click)="onClick()">
+        </div>
+    </div>
+    <div *ngIf="!isScreenSmall" class="hero-image">
+        <img class="c-hero_img" src="../../assets/person.png"> 
+    </div>
+</div>
+<div class="side-panel">
+    <div class="side-card">
+        <div class="c1-content">
+            <h4>Jobs Available :</h4>
+            <div class="c1-number">
+                594
+            </div>
+            <div class="primary-button">
+                Find a job
+            </div>
+        </div>
+    </div>
+    <div class="side-card ">
+            <div class="c1-content">
+                    <h4>Get matched to the jobs that fit you.</h4>
+                    <div class="c2-text">
+                            Your resume will be personally reviewed by our staff and matched with an available job that best meets your qualifications.
+                    </div>
+                    <div class="primary-button">
+                        Post Resume
+                    </div>
+                </div>
+    </div>
+    
+</div>
+</div>
+<app-footer [width]="75" [margin]="-11"></app-footer>
+

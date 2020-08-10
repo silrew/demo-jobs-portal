@@ -1,0 +1,43 @@
+<div class="container-job-listing">
+    <div *ngFor="let listing of jobListing$ | async" class="simple-card">
+        <div class="job-listing">
+            <a class="w-job">
+                <div class="job-titile">
+                    <h6>{{listing.role}}</h6>
+                </div>
+                <div class="job-tags">
+                    <div class="job-tag" (click)="onclickOtherCompanies()">
+                        <mat-icon>business</mat-icon>
+                        <p class="job-tag-p">Other Companies</p> 
+                    </div>
+                    <div class="job-tag" (click)="onclickCity(listing.city)">
+                            <mat-icon>location_on</mat-icon>
+                        <p class="job-tag-p">{{listing.city}}</p> 
+                    </div>
+                    <div class="job-tag"  (click)="onclickCompany(listing.company)">
+                        <mat-icon>work</mat-icon>
+                            <p class="job-tag-p">{{listing.company}}</p>
+                    </div>
+                    <div class="job-tag right-margin-35" (click)="onclickIndustry(listing.lndustry)">
+                            <mat-icon>settings</mat-icon>
+                        <p class="job-tag-p">{{listing.lndustry}}</p>
+                    </div>
+                   
+                </div>
+            </a>
+            <div class="lg-button" (click)="onJobDetailClick(listing)">
+                <mat-icon>double_arrow</mat-icon>
+            </div>
+        </div>
+    </div>
+    <div class="button-container" *ngFor="let num of [pageno$ | async] ">
+        <div class="pagination-buttons">
+        <button class="primary-button" [disabled]="num <= 1" (click)="onPreviousClick(numPage.textContent)">Previous</button>
+        <button class="primary-button" [disabled]="num === 0" (click)="onNextClick(numPage.textContent)">Next</button>
+    </div>
+    <div class="pageno-text">
+        <span #numPage>{{pageno$ | async}}</span>
+        <span>  /14 </span>
+    </div>
+    </div>
+</div>

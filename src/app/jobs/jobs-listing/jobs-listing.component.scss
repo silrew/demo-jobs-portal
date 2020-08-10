@@ -1,0 +1,95 @@
+:host{
+    width: 66.66%;
+    padding-right: 32px;
+}
+.simple-card{
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 22px 30px;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #263843;
+}
+h6{
+    margin: 0px 0px 12px 0px;
+    font-size: 1rem;
+}
+.w-job{
+    width: 100%;
+    padding-right: 24px;
+    }
+.job-tags{
+    display: flex;
+    box-sizing: border-box;
+}
+.job-tag{
+    font-size: .7rem;
+}
+.job-icon, .mat-icon{
+    width: 16px;
+    height: 16px;
+    margin-top: -4px;
+    margin-right: 10px;
+    color: #fcb813;
+}
+.job-tag{
+    display: flex;
+}
+.job-tag-p{
+    display: inline-block;
+    margin-top:0px;
+    margin-bottom:0px;
+    margin-right: 15px;
+    color: gray;
+}
+.lg-button{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #263843;
+    cursor: pointer;
+}
+.lg-button:hover{
+    background-color: #fcb813;
+}
+.right-margin-35{
+    margin-right: 35px;
+}
+.lg-button .img-lg-button{
+    width: 22px;
+}
+.lg-button .mat-icon{
+    color:white;
+}
+a{
+    cursor: pointer;
+}
+.job-listing{
+    display: flex;
+    justify-content: space-between;
+}
+.button-container{
+    display: flex;
+    justify-content: space-between;
+}
+button:disabled {
+    cursor: no-drop;
+    filter: saturate(.5);
+}
+.primary-button{
+    width: 140px;
+    margin-right: 20px;
+    padding: 16px 28px;
+    border-radius:10px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 0px;
+}
+.primary-button:focus {
+    outline: none;
+}

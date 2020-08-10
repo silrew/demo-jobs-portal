@@ -1,0 +1,17 @@
+
+<mat-card class="container">
+
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+        <mat-form-field class="example-full-width">
+            <mat-label>Name</mat-label>
+            <input matInput  type="text" formControlName="name">
+          </mat-form-field>
+        
+          <mat-form-field class="example-full-width">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" >
+          </mat-form-field>
+          <button type="submit"  color="primary">Submit</button>
+    </form>
+
+</mat-card>

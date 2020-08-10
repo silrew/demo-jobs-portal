@@ -1,0 +1,63 @@
+<div *ngFor="let job of service.selectedJobDetails | async" class="container">
+    <div class="simple-card-1">
+        <div class="job-detail" >
+            <h2>{{job.company}}</h2>
+            <h4 class="text-underline">{{job.role}}</h4>
+            <div class="bold-text">
+                Position Summary:
+            </div>
+            <p>loremepsum()
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+            </p>
+            <div class="bold-text">
+                Specifications:
+            </div>
+            <p>
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+            </p>
+            <div class="bold-text">
+                Performance Standards:
+            </div>
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+            <div class="bold-text">
+                Note:
+            </div>
+            <p>
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+            </p>
+        </div>
+    </div>
+    <div class="simple-card-2">
+        <h3>{{job.role}}</h3>
+        <small>{{job.company}}</small>
+        <div class="c-form">
+            <form [formGroup]="jobForm">
+            <input type="text" formControlName="name" placeholder="Name" required>
+            <div  class="error"
+  *ngIf="jobForm.get('name').hasError('required') && jobForm.get('name').touched">
+  Name is required
+</div>
+            <input type="email" formControlName="email" placeholder="Email" required>
+            <div  class="error"
+            *ngIf="jobForm.get('email').hasError('required') && jobForm.get('email').touched">
+            Email is required
+          </div>
+            <input type="text"  formControlName="city" placeholder="city /state/ zip" required>
+            <div  class="error"
+            *ngIf="jobForm.get('city').hasError('required') && jobForm.get('city').touched">
+            City / State is required
+          </div>
+            <input type="number" formControlName="years" placeholder="Years of Experience" required>
+            <div  class="error"
+            *ngIf="jobForm.get('years').hasError('required') && jobForm.get('years').touched">
+            Experience is required
+          </div>
+            <input type="file" formControlName="resume" required>
+            <button class="submit-button" [disabled]="!jobForm.valid" (click)="onFormSubmit()">
+                Apply Now
+            </button>
+        </form>
+        </div>
+    </div>
+</div>

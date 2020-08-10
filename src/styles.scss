@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+    background-color: #f4f7fa;
+    font-family: sofia-pro, sans-serif;
+    color: #7d8890;
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 300;
+    overflow: hidden;
+}
+:root{$base-color: #fcb813;}
+.primary-button {
+    background-color: #fcb813;
+    color: white;
+}
+body{
+    color: #7d8890;
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 300;
+}

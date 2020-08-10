@@ -1,0 +1,15 @@
+:host{
+    padding: 40px 32px;
+}
+.container{
+    display: flex;
+}
+.footer-container{
+    margin-top: 68px;
+}
+@media screen and (max-width:850px) {
+    .container{
+        display: block;
+        width:100%;
+    }
+}
